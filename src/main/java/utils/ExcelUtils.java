@@ -11,13 +11,22 @@ public class ExcelUtils {
              Workbook workbook = new XSSFWorkbook(fis)) {
             Sheet sheet = workbook.getSheet(sheetName);
             Row row = sheet.getRow(rowNum);
-            int totalrow=sheet.getLastRowNum();
-            System.out.println(totalrow);
             Cell cell = row.getCell(colNum);
             return cell.getStringCellValue();
         } catch (Exception e) {
             e.printStackTrace();
             return null;
+        }
+    }
+
+    public static int getRowCount(String sheetName) {
+        try (FileInputStream fis = new FileInputStream("testdata/TestData.xlsx");
+             Workbook workbook = new XSSFWorkbook(fis)) {
+            Sheet sheet = workbook.getSheet(sheetName);
+            return sheet.getLastRowNum() + 1; // Adding 1 to include the header row
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 0;
         }
     }
 }
