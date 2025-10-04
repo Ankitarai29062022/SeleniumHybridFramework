@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-10-04T17:50:21 IST" name="SeleniumFrameworkSuite" finished-at="2025-10-04T17:50:53 IST" duration-ms="31375">
+    <groups>
+    </groups>
+    <test started-at="2025-10-04T17:50:21 IST" name="LoginTests" finished-at="2025-10-04T17:50:52 IST" duration-ms="30939">
+      <class name="tests.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@3daa422a]" started-at="2025-10-04T17:50:21 IST" name="setUp" finished-at="2025-10-04T17:50:30 IST" duration-ms="8965" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLogin()[pri:0, instance:tests.LoginTest@3daa422a]" started-at="2025-10-04T17:50:30 IST" name="testLogin" finished-at="2025-10-04T17:50:51 IST" duration-ms="20517" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@3daa422a]" started-at="2025-10-04T17:50:51 IST" name="tearDown" finished-at="2025-10-04T17:50:52 IST" duration-ms="1403" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.LoginTest -->
+    </test> <!-- LoginTests -->
+    <test started-at="2025-10-04T17:50:21 IST" name="LoginTest3" finished-at="2025-10-04T17:50:53 IST" duration-ms="31204">
+      <class name="tests.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@5c5eefef]" started-at="2025-10-04T17:50:21 IST" name="setUp" finished-at="2025-10-04T17:50:30 IST" duration-ms="8153" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLogin()[pri:0, instance:tests.LoginTest@5c5eefef]" started-at="2025-10-04T17:50:30 IST" name="testLogin" finished-at="2025-10-04T17:50:50 IST" duration-ms="20429" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@5c5eefef]" started-at="2025-10-04T17:50:50 IST" name="tearDown" finished-at="2025-10-04T17:50:53 IST" duration-ms="2578" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.LoginTest -->
+    </test> <!-- LoginTest3 -->
+    <test started-at="2025-10-04T17:50:21 IST" name="LoginTest2" finished-at="2025-10-04T17:50:53 IST" duration-ms="31375">
+      <class name="tests.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@dd8ba08]" started-at="2025-10-04T17:50:21 IST" name="setUp" finished-at="2025-10-04T17:50:30 IST" duration-ms="8456" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLogin()[pri:0, instance:tests.LoginTest@dd8ba08]" started-at="2025-10-04T17:50:30 IST" name="testLogin" finished-at="2025-10-04T17:50:48 IST" duration-ms="18054" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@dd8ba08]" started-at="2025-10-04T17:50:48 IST" name="tearDown" finished-at="2025-10-04T17:50:53 IST" duration-ms="4824" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.LoginTest -->
+    </test> <!-- LoginTest2 -->
+  </suite> <!-- SeleniumFrameworkSuite -->
+</testng-results>
