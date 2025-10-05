@@ -16,9 +16,12 @@ import utils.ExtentReportManager;
 import java.io.File;
 import java.io.IOException;
 import org.apache.commons.io.FileUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class LoginTest extends BaseTest {
     private ExtentReports extent;
+    private static final Logger logger = LogManager.getLogger(LoginTest.class);
     private ExtentTest test;
 
     @BeforeClass
@@ -34,10 +37,12 @@ public class LoginTest extends BaseTest {
                 throw new IllegalArgumentException("Input text cannot be null or empty");
             }
             LoginPage loginPage = new LoginPage(driver);
+            logger.info("Starting login test for username: {}", textToSearch);
             loginPage.login(textToSearch, password);
             String screenshotPath = captureScreenshot(driver, "LoginTestSuccess_" + textToSearch);
             test.pass("Login test passed for: " + textToSearch)
                     .addScreenCaptureFromPath(screenshotPath);
+            logger.info("Login test completed for username: {}", textToSearch);
         } catch (Exception e) {
             String screenshotPath = captureScreenshot(driver, "LoginTestFailure_" + textToSearch);
             test.fail("Login test failed for: " + textToSearch + " - " + e.getMessage())
