@@ -7,20 +7,20 @@ import org.openqa.selenium.WebDriver;
 public class LoginPage {
     WebDriver driver;
 
-    By searchengineInput = By.xpath("//textarea[@title='Search']");
+    By usernameInput = By.id("username");
     By passwordField = By.id("password");
-    By searchBottonClick = By.xpath("(//input[@value='Google Search'])[2]");
+    By searchBottonClick = By.xpath("//button[@id='submit']");
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
     }
 
-    public void login(String searchthis) throws InterruptedException {
+    public void login(String username,String password) throws InterruptedException {
     
-        driver.findElement(searchengineInput).sendKeys(searchthis);
+        driver.findElement(usernameInput).sendKeys(username);
         Thread.sleep(5000);
-       // driver.findElement(passwordField).sendKeys(password);
-        driver.findElement(searchengineInput).sendKeys(Keys.ENTER);
+        driver.findElement(passwordField).sendKeys(password);
+        driver.findElement(searchBottonClick).click();
         
         String Capturetitle=driver.getTitle();
         String currentUrl=driver.getCurrentUrl();
