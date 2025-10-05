@@ -44,17 +44,26 @@ public class LoginTest extends BaseTest {
                     .addScreenCaptureFromPath(screenshotPath);
         }
     }
-
     public String captureScreenshot(WebDriver driver, String screenshotName) {
         try {
             File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            String destPath = "screenshots/" + screenshotName + ".png";
+            String destPath = System.getProperty("user.dir") + "/screenshots/" + screenshotName + ".png";
             FileUtils.copyFile(srcFile, new File(destPath));
             return destPath;
         } catch (IOException e) {
             e.printStackTrace();
             return null;
         }
+//    public String captureScreenshot(WebDriver driver, String screenshotName) {
+//        try {
+//            File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//            String destPath = "screenshots/" + screenshotName + ".png";
+//            FileUtils.copyFile(srcFile, new File(destPath));
+//            return destPath;
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//            return null;
+//        }
     }
 
     @DataProvider(name = "loginData")
